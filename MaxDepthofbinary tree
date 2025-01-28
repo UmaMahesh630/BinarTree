@@ -1,0 +1,11 @@
+public int MaxDepth(TreeNode root) {
+        if(root == null)
+        {
+            return 0;
+        }
+
+        var leftMaxdpth = MaxDepth(root.left);
+        var rigthMaxdept = MaxDepth(root.right);
+
+        return Math.Max(leftMaxdpth,rigthMaxdept)+1;
+    }
